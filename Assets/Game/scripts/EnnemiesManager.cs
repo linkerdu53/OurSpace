@@ -28,7 +28,7 @@ public class EnnemiesManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(spawnEnnemies(m_SpawnTime, m_ennemy, m_MainCamera));
+        StartCoroutine(spawnEnnemies(m_SpawnTime, m_ennemy, m_MainCamera, m_scoreBeforeBoss, m_player));
         spawn_boss = false; 
     }
 
@@ -40,21 +40,24 @@ public class EnnemiesManager : MonoBehaviour
             if(m_player.GetComponent<Player>().getScore() > m_scoreBeforeBoss)
             {
                 spawn_boss = true;
-                Vector3 worldPos = m_MainCamera.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Screen.height, m_MainCamera.transform.position.y));
-                worldPos = new Vector3(worldPos.x, worldPos.y, worldPos.z);
+                Vector3 worldPos = m_MainCamera.ScreenToWorldPoint(new Vector3(Screen.width/2, Screen.height, m_MainCamera.transform.position.y));
+                worldPos = new Vector3(worldPos.x, worldPos.y, worldPos.z -100f);
                 Instantiate(boss, worldPos, Quaternion.Euler(0, 0, 0));
             }
         }
     }
 
-    private IEnumerator spawnEnnemies(float spawnTime, GameObject ennemy, Camera mainCamera)
+    private IEnumerator spawnEnnemies(float spawnTime, GameObject ennemy, Camera mainCamera, int scoreBoss, GameObject player)
     {
         while (Application.isPlaying)
         {
             Vector3 worldPos = mainCamera.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width),Screen.height, mainCamera.transform.position.y));
             worldPos = new Vector3(worldPos.x, worldPos.y, worldPos.z - 50f);
             Instantiate(ennemy, worldPos, Quaternion.Euler(0, 0, 0));
-            yield return new WaitForSeconds(spawnTime);
+            if(player.GetComponent<Player>().getScore() > scoreBoss)
+                yield return new WaitForSeconds(spawnTime/2);
+            else
+                yield return new WaitForSeconds(spawnTime);
         }
         yield return 0;
     }

@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c00615b0f46c62439ab9ed610e0548a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxPv: 1
+  m_MaxPv: 2
   m_MainCamera: {fileID: 0}
   m_MovementSpeed: 10
   m_bonus: {fileID: 7387578043715658301, guid: 0dfef217a2e2df641bc5f04f64ce4876, type: 3}
