@@ -125,7 +125,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c00615b0f46c62439ab9ed610e0548a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxPv: 1
+  m_MaxPv: 2
   m_MainCamera: {fileID: 0}
   m_MovementSpeed: 10
-  m_bonus: {fileID: 7387578043715658301, guid: 0dfef217a2e2df641bc5f04f64ce4876, type: 3}
+  m_bonus:
+  - {fileID: 6152371728466501164, guid: 7122e2afd2c38a344bef9372098a0d0b, type: 3}
+  - {fileID: 1756245148218035966, guid: 6a1c50a4736928d468284469b5fa83cd, type: 3}
+  - {fileID: 1678555244645655092, guid: b706e127d04cbf74c934849078de0259, type: 3}
+  - {fileID: 2172655490526520278, guid: a243ddfb8e910904bb030b9ea983b01f, type: 3}
+  - {fileID: 724566351463595377, guid: aa9723f2700499b44ba1a3067ebbfb23, type: 3}
+  - {fileID: 226984998398174002, guid: 9b34511be38c23f4b83bd29c6e1f44f0, type: 3}

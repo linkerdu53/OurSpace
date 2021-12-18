@@ -12,7 +12,7 @@ public class Ennemy : Entity
     private float m_MovementSpeed;
 
     [SerializeField]
-    private GameObject m_bonus;
+    private GameObject[] m_bonus;
 
     protected override void Awake()
     {
@@ -51,7 +51,10 @@ public class Ennemy : Entity
         if (readCurrentPV() <= 0)
         {
             if (Random.Range(0, 100) < 50)
-                Instantiate(m_bonus, gameObject.transform.position, gameObject.transform.rotation);
+            {
+                Instantiate(m_bonus[Random.Range(1, m_bonus.Length)], gameObject.transform.position, Quaternion.Euler(new Vector3(0f,-0, 75f)));
+            }
+                
             Destroy(gameObject);
         }
         /*
