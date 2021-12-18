@@ -7,6 +7,7 @@ public class bonus : MonoBehaviour
     [SerializeField]
     private float m_MovementSpeed;
 
+    [SerializeField]
     private int m_bonusType;
 
     public int bonusType
@@ -18,7 +19,7 @@ public class bonus : MonoBehaviour
 
     private void Awake()
     {
-        m_bonusType = Random.Range(1, 7);
+        //m_bonusType = Random.Range(1, 7);
     }
 
     private void Start()
