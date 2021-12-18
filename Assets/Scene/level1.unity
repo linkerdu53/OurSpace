@@ -262,7 +262,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &502528860
 GameObject:
@@ -359,7 +359,7 @@ Transform:
   m_LocalScale: {x: 25, y: 1, z: 25}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &502528865
 MonoBehaviour:
@@ -419,8 +419,8 @@ MonoBehaviour:
   m_ennemy: {fileID: 789624732342887804, guid: 62c2964560b0e4c4998f78c8fe4ab407, type: 3}
   m_SpawnTime: 3
   m_player: {fileID: 4695078099537633993}
-  m_scoreBeforeBoss: 5000
-  boss: {fileID: 789624732342887804, guid: 62c2964560b0e4c4998f78c8fe4ab407, type: 3}
+  m_scoreBeforeBoss: 500
+  boss: {fileID: 1244168180570782531, guid: 74fcc06612fa09a46b4cd36540cbc6e2, type: 3}
 --- !u!4 &840471079
 Transform:
   m_ObjectHideFlags: 0
@@ -433,7 +433,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1379653473
 GameObject:
@@ -593,7 +593,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2059605188
 PrefabInstance:
@@ -1583,7 +1583,7 @@ RectTransform:
   - {fileID: 5787484720967886905}
   - {fileID: 5787484720532220009}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
