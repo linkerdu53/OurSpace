@@ -184,6 +184,11 @@ public class Player : Entity
         return m_MaxPv;
     }
 
+    public int getScore()
+    {
+        return score;
+    }
+
     private void bonusControl()
     {
         if(bonusTimer.IsRunning == true)
