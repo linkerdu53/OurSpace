@@ -405,6 +405,9 @@ MonoBehaviour:
   m_MainCamera: {fileID: 1868049134}
   m_ennemy: {fileID: 6024019730969082916, guid: a352b1507b1c51a4dac09fe33041cc77, type: 3}
   m_SpawnTime: 0.8
+  m_player: {fileID: 6050717929333524908}
+  m_scoreBeforeBoss: 25000
+  boss: {fileID: 4024214542217755101, guid: 3d46513e1bc52a64a88cb74e2c94c655, type: 3}
 --- !u!4 &1796637338
 Transform:
   m_ObjectHideFlags: 0
