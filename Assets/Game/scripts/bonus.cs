@@ -18,7 +18,7 @@ public class bonus : MonoBehaviour
 
     private void Awake()
     {
-        m_bonusType = Random.Range(1, 3);
+        m_bonusType = Random.Range(1, 7);
     }
 
     private void Start()

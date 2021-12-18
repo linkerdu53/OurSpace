@@ -47,15 +47,18 @@ public class Ennemy : Entity
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(readCurrentPV() <= 0)
+        updateCurrentPV(-1);
+        if (readCurrentPV() <= 0)
         {
             if (Random.Range(0, 100) < 50)
                 Instantiate(m_bonus, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
+        /*
         else
         {
             updateCurrentPV(-1);
         }
+        */
     }
 }
