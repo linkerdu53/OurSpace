@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Diagnostics;
 
-public class Ennemy : Entity
+public class Tourelle : Entity
 {
     // Start is called before the first frame update
     [SerializeField]
@@ -17,25 +18,38 @@ public class Ennemy : Entity
     [SerializeField]
     private int m_bonusSpawnRate;
 
+    [SerializeField]
+    private float m_speedFire;
+    private float m_currentSpeedFire;
+
+    [SerializeField]
+    private GameObject m_bullet;
+
+    private Stopwatch timer;
+
     protected override void Awake()
     {
         base.Awake();
         m_MainCamera = Camera.main;
+        timer = new Stopwatch();
+        timer.Start();
+        m_currentSpeedFire = m_speedFire;
     }
     void Start()
     {
-        if (gameObject.GetComponent<Renderer>().material)
-        {
-            gameObject.GetComponent<Renderer>().material.SetFloat("Vector1_b5e7df0c0b2141c18f67115a93441cfa", Random.Range(-5f, 5f));
-            gameObject.GetComponent<Renderer>().material.SetFloat("Vector1_202c2e6711b44ccba6dc32c3b5006f92", Random.Range(-2.5f, 2.5f));
-        }
-        
     }
 
     // Update is called once per frame
     void Update()
     {
         movementEnnemy();
+
+        if (timer.Elapsed.TotalMilliseconds > m_currentSpeedFire)
+        {
+            Vector3 pos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z + 10f);
+            GameObject e_bullet = Instantiate(m_bullet, pos, Quaternion.Euler(90, 0, 0));
+            timer.Restart();
+        }
     }
 
     private void movementEnnemy()
@@ -48,21 +62,21 @@ public class Ennemy : Entity
         else
         {
             gameObject.transform.Translate(Vector3.forward * m_MovementSpeed * Time.deltaTime);
-        }   
+        }
     }
 
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "Player" || collision.collider.tag == "Bullet")
+        if(collision.collider.tag == "Player" || collision.collider.tag == "Bullet")
             updateCurrentPV(-1);
         if (readCurrentPV() <= 0)
         {
             if (Random.Range(0, 100) < m_bonusSpawnRate)
             {
-                Instantiate(m_bonus[Random.Range(0, m_bonus.Length)], gameObject.transform.position, Quaternion.Euler(new Vector3(0f,-0, 75f)));
+                Instantiate(m_bonus[Random.Range(0, m_bonus.Length)], gameObject.transform.position, Quaternion.Euler(new Vector3(0f, -0, 75f)));
             }
-                
+
             Destroy(gameObject);
         }
     }
