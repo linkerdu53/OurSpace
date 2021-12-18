@@ -24,7 +24,7 @@ public class GroundScroll : MonoBehaviour
     void Update()
     {
         
-        Vector3 posEndGround = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z - gameObject.transform.localScale.z/2 );
+        Vector3 posEndGround = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z - (gameObject.transform.localScale.z)/2 );
         Vector3 screenPos = m_MainCamera.WorldToScreenPoint(posEndGround);
         if (screenPos.y < Screen.height/2 + 10 && next == false)
         {
@@ -35,7 +35,7 @@ public class GroundScroll : MonoBehaviour
             
 
         }
-        if (screenPos.y <= -Screen.height/2)
+        if (screenPos.y <= -Screen.height)
         {
             Destroy(gameObject);
         }
