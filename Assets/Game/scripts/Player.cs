@@ -24,6 +24,9 @@ public class Player : Entity
     [SerializeField]
     private GameObject m_bullet;
 
+    [SerializeField]
+    private GameObject m_shield;
+
     private Stopwatch timer;
 
     private int score;
@@ -51,6 +54,7 @@ public class Player : Entity
         m_currentSpeedFire = m_speedFire;
         m_currentVerticalSpeed = m_VerticalSpeed;
         m_currentHorizontalSpeed = m_HorizontalSpeed;
+        m_shield.SetActive(false);
     }
 
 
@@ -103,9 +107,32 @@ public class Player : Entity
 
         if (Input.GetKey(KeyCode.Space) && timer.Elapsed.TotalMilliseconds > m_currentSpeedFire)
         {
-            Vector3 pos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z - 3f);
-            GameObject e_bullet = Instantiate(m_bullet, pos, Quaternion.Euler(90, 0, 0));
-            e_bullet.GetComponent<bullet>().BulletHitEvent += updateScore;
+            if (typeOfBonus == 3)
+            {
+                for (int i = 0; i<3; i++)
+                {
+                    Vector3 pos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z - 3f);
+                    GameObject e_bullet = Instantiate(m_bullet, pos, Quaternion.Euler(90, 0, 0));
+                    e_bullet.GetComponent<bullet>().BulletHitEvent += updateScore;
+                    e_bullet.GetComponent<bullet>().setDirection(i);
+                }
+            }
+            else if(typeOfBonus == 4)
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    Vector3 pos = new Vector3(gameObject.transform.position.x - 5.5f +(i*5.5f), gameObject.transform.position.y, gameObject.transform.position.z - 3f);
+                    GameObject e_bullet = Instantiate(m_bullet, pos, Quaternion.Euler(90, 0, 0));
+                    e_bullet.GetComponent<bullet>().BulletHitEvent += updateScore;
+                }
+            }
+            else
+            {
+                Vector3 pos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z - 3f);
+                GameObject e_bullet = Instantiate(m_bullet, pos, Quaternion.Euler(90, 0, 0));
+                e_bullet.GetComponent<bullet>().BulletHitEvent += updateScore;
+            }
+            
             
 ;           timer.Restart();
         }
@@ -132,6 +159,15 @@ public class Player : Entity
             isBonusActive = true;
             UnityEngine.Debug.Log("Bonus collected");
             typeOfBonus = collision.collider.gameObject.GetComponent<bonus>().bonusType;
+            if(typeOfBonus == 5)
+            {
+                updateCurrentPV(1);
+                changeHPEvent(readCurrentPV());
+            }
+            if(typeOfBonus == 6)
+            {
+                m_shield.GetComponent<Shield>().restoreShield();
+            }
             UnityEngine.Debug.Log(typeOfBonus);
         }
     }
