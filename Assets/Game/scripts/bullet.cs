@@ -14,6 +14,14 @@ public class bullet : MonoBehaviour
 
     private int score;
 
+    private int m_direction;
+    public int BulletDirection
+    {
+        get { return m_direction; }
+        private set { m_direction = value; }
+    }
+  
+
     public delegate void OnBulletHit();
     public event OnBulletHit BulletHitEvent;
 
@@ -21,6 +29,7 @@ public class bullet : MonoBehaviour
     private void Awake()
     {
         m_mainCamera = Camera.main;
+        m_direction = 0;
     }
     void Start()
     {
@@ -37,11 +46,21 @@ public class bullet : MonoBehaviour
         }
         else
         {
-            gameObject.transform.Translate(Vector3.up * -m_bulletSpeed * Time.deltaTime);
+            if(m_direction == 0)
+                gameObject.transform.Translate(Vector3.up * -m_bulletSpeed * Time.deltaTime); 
+            else if(m_direction == 1)
+            {
+                Vector3 direction = new Vector3(1,1,0);
+                gameObject.transform.Translate(direction * -m_bulletSpeed * Time.deltaTime);
+            }
+            else if(m_direction == 2)
+            {
+                Vector3 direction = new Vector3(-1, 1, 0);
+                gameObject.transform.Translate(direction * -m_bulletSpeed * Time.deltaTime);
+            }
+
         }
     }
-
-
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -51,5 +70,10 @@ public class bullet : MonoBehaviour
             BulletHitEvent();
             Destroy(gameObject);
         }
+    }
+
+    public void setDirection(int aim)
+    {
+        m_direction = aim;
     }
 }
