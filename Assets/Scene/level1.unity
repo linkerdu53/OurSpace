@@ -619,8 +619,8 @@ Camera:
   m_GameObject: {fileID: 1379653473}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1085,6 +1085,7 @@ MonoBehaviour:
   m_bullet: {fileID: 2404978647595651197, guid: 8a53ce56546e90f44b5b3b1382c583ac, type: 3}
   m_shield: {fileID: 9062023940923799118}
   bonusDuration: 10
+  isBossDead: 0
 --- !u!54 &4695078099537633996
 Rigidbody:
   m_ObjectHideFlags: 0
