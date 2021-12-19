@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648c5b94a69365943a8790b0922f6f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 1
+  sceneIndex: -2
   yourButton: {fileID: 417255375}
 --- !u!114 &417255375
 MonoBehaviour:
