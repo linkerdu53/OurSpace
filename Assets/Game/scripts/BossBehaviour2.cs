@@ -9,7 +9,10 @@ public class BossBehaviour2 : Entity
     private float m_MovementSpeed;
 
     [SerializeField]
-    private Camera m_mainCamera; 
+    private Camera m_mainCamera;
+
+    [SerializeField]
+    private GameObject m_player;
 
     private Vector3 m_bossEndPoint;
 
@@ -18,6 +21,7 @@ public class BossBehaviour2 : Entity
         base.Awake();
         m_mainCamera = Camera.main;
         m_bossEndPoint = m_mainCamera.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height, m_mainCamera.transform.position.y));
+        m_player = GameObject.Find("Player");
     }
     void Start()
     {
@@ -38,6 +42,7 @@ public class BossBehaviour2 : Entity
             updateCurrentPV(-1);
             if (readCurrentPV() <= 0)
             {
+                m_player.GetComponent<Player>().setStateBoss();
                 Destroy(gameObject);
             }
         }

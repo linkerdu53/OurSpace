@@ -23,6 +23,9 @@ public class userInterface : MonoBehaviourSingleton<userInterface>
     [SerializeField]
     private GameObject m_panel;
 
+    [SerializeField]
+    private GameObject m_endPanel;
+
     /// <summary>
     /// Couleur du slider 
     /// </summary>
@@ -43,7 +46,8 @@ public class userInterface : MonoBehaviourSingleton<userInterface>
         m_RestartButton.gameObject.SetActive(false);
         m_ThePlayer.GetComponent<Player>().changeScoreEvent += updateScore;
         m_ThePlayer.GetComponent<Player>().changeHPEvent += updateLife;
-
+        m_ThePlayer.GetComponent<Player>().changeStateBoss += updateEnd;
+        m_endPanel.SetActive(false);
         m_RestartButton.onClick.AddListener(gameManager.Instance.ResetLevel);
     }
     private void Start()
@@ -81,4 +85,10 @@ public class userInterface : MonoBehaviourSingleton<userInterface>
     {
         m_panel.SetActive(pause);
     }
+
+   private void updateEnd()
+   {
+        m_endPanel.SetActive(true);
+        Time.timeScale = 0;
+   }
 }

@@ -14,6 +14,9 @@ public class BossBehaviour1 : Entity
     private Vector3 m_bossEndPoint;
 
     [SerializeField]
+    private GameObject m_player;
+
+    [SerializeField]
     private float m_speedFire;
     private float m_currentSpeedFire;
 
@@ -30,6 +33,7 @@ public class BossBehaviour1 : Entity
         timer = new Stopwatch();
         timer.Start();
         m_currentSpeedFire = m_speedFire;
+        m_player = GameObject.Find("Player");
     }
     void Start()
     {
@@ -54,6 +58,7 @@ public class BossBehaviour1 : Entity
             updateCurrentPV(-1);
             if (readCurrentPV() <= 0)
             {
+                m_player.GetComponent<Player>().setStateBoss();
                 Destroy(gameObject);
             }
         }
