@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossBehaviour : Entity
+public class BossBehaviour2 : Entity
 {
     // Start is called before the first frame update
     [SerializeField]
@@ -41,12 +41,6 @@ public class BossBehaviour : Entity
                 Destroy(gameObject);
             }
         }
-        
-        /*
-        else
-        {
-            updateCurrentPV(-1);
-        }
-        */
+       
     }
 }
