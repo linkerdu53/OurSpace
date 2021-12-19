@@ -204,8 +204,8 @@ MonoBehaviour:
   m_ennemy: {fileID: 9008412742384676559, guid: b55422ba200865047917f44eb9925e44, type: 3}
   m_SpawnTime: 0.5
   m_player: {fileID: 8552455716263511677}
-  m_scoreBeforeBoss: 5000
-  boss: {fileID: 0}
+  m_scoreBeforeBoss: 200
+  boss: {fileID: 95268442076497329, guid: 02d2da61c9635fe47bfd26f58e25f0f9, type: 3}
 --- !u!4 &567779757
 Transform:
   m_ObjectHideFlags: 0
@@ -2654,8 +2654,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5253876479921534228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.97}
-  m_LocalScale: {x: 16, y: 16, z: 16}
+  m_LocalPosition: {x: 0.062, y: -0.72, z: 0.074}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 9078057855635233991}
   m_RootOrder: 0
@@ -2708,7 +2708,7 @@ MonoBehaviour:
   m_MaxPv: 5
   m_MainCamera: {fileID: 629538055}
   m_VerticalSpeed: 20
-  m_HorizontalSpeed: 30
+  m_HorizontalSpeed: 40
   m_speedFire: 250
   m_bullet: {fileID: 2404978647595651197, guid: 8a53ce56546e90f44b5b3b1382c583ac, type: 3}
   m_shield: {fileID: 5253876479921534228}
