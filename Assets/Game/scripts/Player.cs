@@ -54,7 +54,7 @@ public class Player : Entity
         m_currentSpeedFire = m_speedFire;
         m_currentVerticalSpeed = m_VerticalSpeed;
         m_currentHorizontalSpeed = m_HorizontalSpeed;
-        m_shield.SetActive(true);
+        m_shield.SetActive(false);
     }
 
 
