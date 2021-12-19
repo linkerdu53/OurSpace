@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MaxPv: 2
   m_MainCamera: {fileID: 0}
-  m_MovementSpeed: 10
+  m_MovementSpeed: 20
   m_bonus:
   - {fileID: 6152371728466501164, guid: 7122e2afd2c38a344bef9372098a0d0b, type: 3}
   - {fileID: 1756245148218035966, guid: 6a1c50a4736928d468284469b5fa83cd, type: 3}

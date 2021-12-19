@@ -48,6 +48,7 @@ MonoBehaviour:
   m_MaxPv: 100
   m_MovementSpeed: 15
   m_mainCamera: {fileID: 0}
+  m_player: {fileID: 0}
   m_speedFire: 10000
   m_bullet: {fileID: 3606938079893347646, guid: e6008d31d64c56d43878b11093edf221, type: 3}
 --- !u!136 &7383793198384688285
