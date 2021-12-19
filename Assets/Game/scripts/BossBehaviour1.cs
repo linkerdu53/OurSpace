@@ -24,6 +24,7 @@ public class BossBehaviour1 : Entity
     private GameObject m_bullet;
 
     private Stopwatch timer;
+    private bool stop; 
 
     protected override void Awake()
     {
@@ -37,12 +38,21 @@ public class BossBehaviour1 : Entity
     }
     void Start()
     {
+        stop = false; 
     }
 
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, m_bossEndPoint, Time.deltaTime * m_MovementSpeed);
+        if (gameObject.transform.position.z != m_bossEndPoint.z && stop == false)
+        {
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, m_bossEndPoint, Time.deltaTime * m_MovementSpeed);
+        }
+        else if (gameObject.transform.position.z == m_bossEndPoint.z)
+        {
+            stop = true;
+        }
+            
         if (timer.Elapsed.TotalMilliseconds > m_currentSpeedFire)
         {
             Vector3 pos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z + 10f);
@@ -63,5 +73,10 @@ public class BossBehaviour1 : Entity
             }
         }
 
+    }
+
+    public bool getStop()
+    {
+        return stop; 
     }
 }
