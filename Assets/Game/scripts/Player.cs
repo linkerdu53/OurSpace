@@ -36,11 +36,14 @@ public class Player : Entity
     private float bonusDuration;
     private Stopwatch bonusTimer;
     private int typeOfBonus;
+    public bool isBossDead;
 
     public delegate void onHPChange(int currentHP);
     public event onHPChange changeHPEvent;
     public delegate void onScoreChange(int score);
     public event onScoreChange changeScoreEvent;
+    public delegate void onBossStateChange();
+    public event onBossStateChange changeStateBoss;
     
 
     protected override void Awake()
@@ -55,6 +58,7 @@ public class Player : Entity
         m_currentVerticalSpeed = m_VerticalSpeed;
         m_currentHorizontalSpeed = m_HorizontalSpeed;
         m_shield.SetActive(false);
+        isBossDead = false;
     }
 
 
@@ -63,6 +67,12 @@ public class Player : Entity
     {
         PlayerControl();
         bonusControl();
+
+        if(isBossDead == true)
+        {
+            changeStateBoss();
+            setStateBoss();      
+        }
     }
 
     private void PlayerControl()
@@ -187,6 +197,11 @@ public class Player : Entity
     public int getScore()
     {
         return score;
+    }
+
+    public void setStateBoss()
+    {
+        isBossDead = !isBossDead;
     }
 
     private void bonusControl()
