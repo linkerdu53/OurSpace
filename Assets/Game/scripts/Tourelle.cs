@@ -44,7 +44,7 @@ public class Tourelle : Entity
     {
         movementEnnemy();
 
-        if (timer.Elapsed.TotalMilliseconds > m_currentSpeedFire)
+        if (timer.Elapsed.TotalMilliseconds > m_currentSpeedFire && Time.timeScale > 0)
         {
             Vector3 pos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z + 10f);
             GameObject e_bullet = Instantiate(m_bullet, pos, Quaternion.Euler(90, 0, 0));
