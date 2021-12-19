@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2404978647595651197}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -0.11126763, y: 67.69513, z: -29.252356}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 1.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_mainCamera: {fileID: 0}
-  m_bulletSpeed: 25
+  m_bulletSpeed: 60
 --- !u!82 &7433411705283044504
 AudioSource:
   m_ObjectHideFlags: 0

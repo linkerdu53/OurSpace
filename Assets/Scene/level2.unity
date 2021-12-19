@@ -2460,7 +2460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MaxPv: 5
   m_MainCamera: {fileID: 1868049134}
-  m_VerticalSpeed: 30
+  m_VerticalSpeed: 20
   m_HorizontalSpeed: 30
   m_speedFire: 250
   m_bullet: {fileID: 2404978647595651197, guid: 8a53ce56546e90f44b5b3b1382c583ac, type: 3}
