@@ -1642,7 +1642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648c5b94a69365943a8790b0922f6f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: -1
+  sceneIndex: -4
   yourButton: {fileID: 3152519350762671350}
 --- !u!114 &3152519350762671350
 MonoBehaviour:
@@ -2008,7 +2008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648c5b94a69365943a8790b0922f6f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: -1
+  sceneIndex: -4
   yourButton: {fileID: 3152519351375816168}
 --- !u!224 &3152519351485785680
 RectTransform:
