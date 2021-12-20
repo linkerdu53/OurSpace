@@ -20032,10 +20032,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MainCamera: {fileID: 1379653475}
-  m_ennemy: {fileID: 789624732342887804, guid: 62c2964560b0e4c4998f78c8fe4ab407, type: 3}
-  m_SpawnTime: 3
+  m_ennemy:
+  - {fileID: 789624732342887804, guid: 62c2964560b0e4c4998f78c8fe4ab407, type: 3}
+  - {fileID: 4986834678356453547, guid: 80141d8c6a3fa91448d3cc6fb2fb64fe, type: 3}
+  - {fileID: 6287144592912817344, guid: e71afc0cd0c503946af16114463fd89c, type: 3}
+  - {fileID: 1881595243743090502, guid: 6eb9762b53b84dd4b8ec8e54434961d8, type: 3}
+  m_SpawnTime:
+  - 5
+  - 20
+  - 30
+  - 30
   m_player: {fileID: 4695078099537633993}
-  m_scoreBeforeBoss: 3500
+  m_scoreBeforeBoss: 3000
   boss: {fileID: 1244168180570782531, guid: 74fcc06612fa09a46b4cd36540cbc6e2, type: 3}
 --- !u!4 &840471079
 Transform:
