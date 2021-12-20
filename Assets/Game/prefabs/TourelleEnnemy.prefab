@@ -138,7 +138,7 @@ MonoBehaviour:
   - {fileID: 2172655490526520278, guid: a243ddfb8e910904bb030b9ea983b01f, type: 3}
   - {fileID: 724566351463595377, guid: aa9723f2700499b44ba1a3067ebbfb23, type: 3}
   - {fileID: 226984998398174002, guid: 9b34511be38c23f4b83bd29c6e1f44f0, type: 3}
-  m_bonusSpawnRate: 15
+  m_bonusSpawnRate: 30
   m_speedFire: 2500
   m_bullet: {fileID: 4355117273881400205, guid: 121691234f0fd57488e1a9dde561d571, type: 3}
 --- !u!136 &5602576398722729614

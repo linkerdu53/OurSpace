@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b35958ae065cb24a88125b34ae8d090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yourButton: {fileID: 0}
+  yourButton: {fileID: 3152519350723495868}
   clicBtnResume: 0
 --- !u!1 &234525670
 GameObject:
@@ -472,8 +472,14 @@ MonoBehaviour:
   m_MainCamera: {fileID: 1082261957}
   m_ennemy:
   - {fileID: 6024019730969082916, guid: a352b1507b1c51a4dac09fe33041cc77, type: 3}
+  - {fileID: 6162720923174834209, guid: 45136ac90465d264ab20e970f87dde59, type: 3}
+  - {fileID: 8133255270490513540, guid: a117a03ea9168ca40b792312d7b4517c, type: 3}
+  - {fileID: 9211631835770284760, guid: 6a83032b55622864bbc918034de79760, type: 3}
   m_SpawnTime:
   - 1
+  - 6
+  - 25
+  - 35
   m_player: {fileID: 2241628684937687129}
   m_scoreBeforeBoss: 100000
   boss: {fileID: 0}
@@ -1157,10 +1163,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4d314024f077eb4eb9942b3ed312076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxPv: 5
+  m_MaxPv: 15
   m_MainCamera: {fileID: 1082261957}
-  m_VerticalSpeed: 20
-  m_HorizontalSpeed: 30
+  m_VerticalSpeed: 30
+  m_HorizontalSpeed: 45
   m_speedFire: 250
   m_bullet: {fileID: 2404978647595651197, guid: 8a53ce56546e90f44b5b3b1382c583ac, type: 3}
   m_shield: {fileID: 7038960703172423074}
@@ -8445,7 +8451,7 @@ MonoBehaviour:
   m_panel: {fileID: 8930278612741707138}
   m_endPanel: {fileID: 3152519350512715791}
   m_fill: {fileID: 8930278613069941991}
-  m_ThePlayer: {fileID: 0}
+  m_ThePlayer: {fileID: 2241628684937687129}
 --- !u!224 &8930278611794304537
 RectTransform:
   m_ObjectHideFlags: 0

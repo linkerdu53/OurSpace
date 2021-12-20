@@ -20043,7 +20043,7 @@ MonoBehaviour:
   - 30
   - 30
   m_player: {fileID: 4695078099537633993}
-  m_scoreBeforeBoss: 4000
+  m_scoreBeforeBoss: 3000
   boss: {fileID: 1244168180570782531, guid: 74fcc06612fa09a46b4cd36540cbc6e2, type: 3}
 --- !u!4 &840471079
 Transform:
