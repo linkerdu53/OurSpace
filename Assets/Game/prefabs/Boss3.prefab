@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2daa04f8c9a32884ca8898e0f0a259bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxPv: 200
+  m_MaxPv: 125
   m_MovementSpeed: 20
   m_mainCamera: {fileID: 0}
   m_player: {fileID: 0}
