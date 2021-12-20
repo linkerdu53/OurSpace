@@ -1634,7 +1634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4d314024f077eb4eb9942b3ed312076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxPv: 15
+  m_MaxPv: 7
   m_MainCamera: {fileID: 1082261957}
   m_VerticalSpeed: 30
   m_HorizontalSpeed: 45
