@@ -9,10 +9,10 @@ public class EnnemiesManager : MonoBehaviour
     private Camera m_MainCamera = null;
 
     [SerializeField]
-    private GameObject m_ennemy;
+    private GameObject[] m_ennemy;
 
     [SerializeField]
-    private float m_SpawnTime;
+    private float[] m_SpawnTime;
 
     [SerializeField]
     private GameObject m_player;
@@ -21,21 +21,25 @@ public class EnnemiesManager : MonoBehaviour
     private int m_scoreBeforeBoss;
 
     [SerializeField]
-    private GameObject boss; 
+    private GameObject boss = null; 
 
     private bool spawn_boss;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(spawnEnnemies(m_SpawnTime, m_ennemy, m_MainCamera, m_scoreBeforeBoss, m_player));
-        spawn_boss = false; 
+        for(int i = 0; i< m_ennemy.Length; i++)
+        {
+            StartCoroutine(spawnEnnemies(m_SpawnTime[i] , m_ennemy[i], m_MainCamera, m_scoreBeforeBoss, m_player));     
+        }
+        spawn_boss = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!spawn_boss)
+        if (!spawn_boss && boss != null)
         {
             if(m_player.GetComponent<Player>().getScore() > m_scoreBeforeBoss)
             {
