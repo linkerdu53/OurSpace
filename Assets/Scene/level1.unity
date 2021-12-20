@@ -20035,7 +20035,7 @@ MonoBehaviour:
   m_ennemy: {fileID: 789624732342887804, guid: 62c2964560b0e4c4998f78c8fe4ab407, type: 3}
   m_SpawnTime: 3
   m_player: {fileID: 4695078099537633993}
-  m_scoreBeforeBoss: 500
+  m_scoreBeforeBoss: 3500
   boss: {fileID: 1244168180570782531, guid: 74fcc06612fa09a46b4cd36540cbc6e2, type: 3}
 --- !u!4 &840471079
 Transform:
