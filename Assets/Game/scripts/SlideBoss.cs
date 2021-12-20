@@ -33,7 +33,7 @@ public class SlideBoss : MonoBehaviour
             {
                 Debug.Log("ici");
                 gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, endPointRight, Time.deltaTime * m_slideSpeed);
-                if (gameObject.transform.position == endPointLeft)
+                if (gameObject.transform.position == endPointRight)
                     sens = !sens;
             }              
             else if (sens == false)
