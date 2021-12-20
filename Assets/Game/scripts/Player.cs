@@ -81,7 +81,7 @@ public class Player : Entity
     
         
         //ROTATION DROITE
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.Q))
         {
             if(screenPos.x >= 0)
             {
@@ -90,7 +90,7 @@ public class Player : Entity
             
         }
         //ROTATION GAUCHE
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             if (screenPos.x <= Screen.width)
             {
@@ -98,7 +98,7 @@ public class Player : Entity
             }
         }
 
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
             if (screenPos.y >= 0 )
             {
@@ -106,7 +106,7 @@ public class Player : Entity
             }
             
         }
-        else if (Input.GetKey(KeyCode.UpArrow))
+        else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Z))
         {
             if (screenPos.y <= Screen.height)
             {
