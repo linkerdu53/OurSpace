@@ -270,12 +270,16 @@ MonoBehaviour:
   m_MainCamera: {fileID: 629538055}
   m_ennemy:
   - {fileID: 9008412742384676559, guid: b55422ba200865047917f44eb9925e44, type: 3}
-  - {fileID: 789624732342887804, guid: 62c2964560b0e4c4998f78c8fe4ab407, type: 3}
+  - {fileID: 4986834678356453547, guid: 80141d8c6a3fa91448d3cc6fb2fb64fe, type: 3}
+  - {fileID: 6287144592912817344, guid: e71afc0cd0c503946af16114463fd89c, type: 3}
+  - {fileID: 1881595243743090502, guid: 6eb9762b53b84dd4b8ec8e54434961d8, type: 3}
   m_SpawnTime:
   - 0.5
-  - 2.5
+  - 16
+  - 30
+  - 30
   m_player: {fileID: 8552455716263511677}
-  m_scoreBeforeBoss: 2000
+  m_scoreBeforeBoss: 0
   boss: {fileID: 95268442076497329, guid: 02d2da61c9635fe47bfd26f58e25f0f9, type: 3}
 --- !u!4 &567779757
 Transform:
@@ -372,7 +376,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629538053}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 100, z: 0}
+  m_LocalPosition: {x: 0, y: 45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
