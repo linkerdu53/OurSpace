@@ -27,7 +27,7 @@ public class gameManager : MonoBehaviourSingleton<gameManager>
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.P))
+        if (Input.GetKeyUp(KeyCode.P) || Input.GetKeyUp(KeyCode.Escape))
         {
             m_paused = !m_paused;
             Play(m_paused);
